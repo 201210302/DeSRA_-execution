@@ -8,9 +8,10 @@ from scipy import ndimage
 
 from distance import calc_artifact_map
 #from mmseg.apis import inference_segmentor, init_segmentor, show_seg
-from mmseg.apis import inference_model, init_model, show_result_pyplot
+from mmseg.apis import init_model, inference_model, show_result_pyplot
 #from mmseg.core.evaluation import get_palette
 from mmseg.utils import get_palette
+from mmseg.structures import SegDataSample
 
 CLASSES = [
     'wall', 'building', 'sky', 'floor', 'tree', 'ceiling', 'road', 'bed', 'windowpane', 'grass', 'cabinet', 'sidewalk',
@@ -101,7 +102,8 @@ def main():
             except Exception as error:
                 print('Error', error, img_name)
             else:
-                seg_mask = show_result_pyplot(model, gan_img_path, result, get_palette(args.palette))
+                
+                seg_mask = result.pred_sem_seg.data[0].detach().cpu().numpy()
 
                 # save mask
                 cv2.imwrite(save_seg_mask_path, seg_mask)
@@ -123,7 +125,9 @@ def main():
                 save_contrast_seg_root = os.path.join(args.save_root, 'rgb_contrast_seg', sub_root_name)
                 os.makedirs(save_contrast_seg_root, exist_ok=True)
                 save_contrast_seg_path = os.path.join(save_contrast_seg_root, img_name)
-
+                
+             
+                
                 labels = set(list(seg_mask.flatten()))
                 h, w = seg_mask.shape
                 seg_mask = seg_mask[window_size // 2:h - window_size // 2, window_size // 2:w - window_size // 2]
