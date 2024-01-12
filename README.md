@@ -39,5 +39,7 @@ If you encounter the directory error about SSIM_MSE_GAN_threshold.txt
     mkdir checkpoints 
 When you download the file by following the link, the file name is slightly different, so change the file name: segformer_mit-b5_640x640_160k_ade20k_20220617_203542-940a6bd8.pth
 
-
+### 📦 Testing datasets
+You can download from [GoogleDrive](https://drive.google.com/drive/folders/1jPTvXq_uJvpOaP5uCZ6unmb13Gt2naVC)
+(For each methods, [DeSRA](https://github.com/TencentARC/DeSRA?tab=readme-ov-file) provide the MSE-SR, GAN-SR, DeSRA-Mask, LR, and human-labeled GT-Mask)
 
