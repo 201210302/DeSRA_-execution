@@ -55,4 +55,7 @@ You can download from [GoogleDrive](https://drive.google.com/drive/folders/1jPTv
         └─sr
 and move images to sr folder
 ## Now you are ready for Quick Inference
+    python demo/artifact_detection.py --mse_root="./LDL/MSE-SR" --gan_root="./LDL/GAN-SR" --save_root="./results/LDL/DeSRA-Mask"
+
+    
 
