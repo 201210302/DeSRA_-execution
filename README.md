@@ -1,4 +1,5 @@
 # DeSRA_execution
+This is an explanation for running DeSRA using version 1.2.2 mmsegmentation. You can change the settings as needed
 
 ## 🔧 Dependencies and Installation
 - python 3.10.2
