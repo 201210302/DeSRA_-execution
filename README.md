@@ -21,7 +21,7 @@
 ### Up to this point, it is the same as DeSRA.
 
 ---------------------------------
-##3 3. Download or clone artifact_detection.py
+### 3. Download or clone artifact_detection.py
 move artifact_detection.py mmsegmentation/demo
 
     git clone https://github.com/201210302/DeSRA_execution/tree/main/mmsegmentation/demo/artifact_detection.py
@@ -42,4 +42,17 @@ When you download the file by following the link, the file name is slightly diff
 ### 📦 Testing datasets
 You can download from [GoogleDrive](https://drive.google.com/drive/folders/1jPTvXq_uJvpOaP5uCZ6unmb13Gt2naVC)
 (For each methods, [DeSRA](https://github.com/TencentARC/DeSRA?tab=readme-ov-file) provide the MSE-SR, GAN-SR, DeSRA-Mask, LR, and human-labeled GT-Mask)
+
+### ✈️Let’s download LDL and run it as an example.
+---------------------------------------------------
+
+### If you download LDL, you make a folder with same name in GAN-SR, MSE-SR like
+    ├─DeSRA-Mask
+    ├─GAN-SR
+    │  └─sr (You can change the name, but it has the same name as the folder you created in MSE-SR.)
+    ├─GT-Mask
+    └─MSE-SR
+        └─sr
+and move images to sr folder
+## Noe you are ready for Quick Inference
 
