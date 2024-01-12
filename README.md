@@ -54,5 +54,5 @@ You can download from [GoogleDrive](https://drive.google.com/drive/folders/1jPTv
     └─MSE-SR
         └─sr
 and move images to sr folder
-## Noe you are ready for Quick Inference
+## Now you are ready for Quick Inference
 
